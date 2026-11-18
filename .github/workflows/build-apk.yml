@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'Millionnaire-Android.zip'
+      - 'Millionnaire-Android-diagnostic.zip'
       - '.github/workflows/build-apk.yml'
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
       - name: Extract Android project
         run: |
           mkdir -p app-project
-          unzip -q Millionnaire-Android.zip -d app-project
+          unzip -q Millionnaire-Android-diagnostic.zip -d app-project
 
       - name: Build APK
         working-directory: app-project
